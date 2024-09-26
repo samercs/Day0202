@@ -1,0 +1,19 @@
+﻿@model Day0202.ViewComponents.LatestNewsVm
+@foreach (var n in Model.NewsList)
+{
+    <div class="card mb-5">
+        <div class="card-header">
+            <h2 class="card-title">
+                @n.Title
+            </h2>
+        </div>
+        @if (Model.ShowNewsBody)
+        {
+            <div class="card-body">
+                <p>
+                    @n.Body
+                </p>
+            </div>
+        }
+    </div>
+}
